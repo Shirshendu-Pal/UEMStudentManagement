@@ -1,0 +1,6 @@
+<form>
+    <input type="text" name="username" [(ngModel)]="username" id="username" >
+    <input type="text" name="password" [(ngModel)]="password" id="password">
+    <input type="submit" value="login" (click)="loginUser()">
+</form>
+<router-outlet></router-outlet>

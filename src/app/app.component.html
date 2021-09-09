@@ -1,0 +1,29 @@
+<!-- 
+<form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+  <input type="text" #name (ngModel)="name" name="name" id="name" placeholder="name">
+  <input type="text" #phone (ngModel)="phone" name="phone" id="phone" placeholder="phone">
+  <input type="text" #percentage (ngModel)="percentage" name="percentage" id="percentage" placeholder="percentage">
+  <input type="submit" value="register">
+</form>
+
+<table>
+  <thead>
+    
+      <tr>
+        <th>Roll Number</th>
+        <th>name</th>
+        <th>phone Number</th>
+        <th>percentage</th>
+      </tr>
+    
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of studentDetails">
+      <td>{{student.rollNumber}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.phone}}</td>
+      <td>{{student.percentage}}</td>
+    </tr>
+  </tbody>
+</table> -->
+<router-outlet></router-outlet>
