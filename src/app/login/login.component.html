@@ -1,6 +1,10 @@
-<form>
-    <input type="text" name="username" [(ngModel)]="username" id="username" >
-    <input type="text" name="password" [(ngModel)]="password" id="password">
-    <input type="submit" value="login" (click)="loginUser()">
+<div class="hero">
+    <div class="form-box">
+<form class="input-group">
+    <input class="input-field" type="text" name="username" [(ngModel)]="username" id="username" placeholder="username" >
+    <input class="input-field" type="password" name="password" [(ngModel)]="password" id="password" placeholder="password">
+    <input class="submit-btn" type="submit" value="login" (click)="loginUser()">
 </form>
+</div>
+</div>
 <router-outlet></router-outlet>

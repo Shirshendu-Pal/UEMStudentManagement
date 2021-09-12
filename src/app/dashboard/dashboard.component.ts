@@ -13,6 +13,17 @@ export class DashboardComponent{
   studentDetails: any;
   username: any;
   password: any;
+  studentToUpdate = {
+    rollNumber: "",
+    name: "",
+    fathersName: "",
+    phone: "",
+    email: "",
+    address: "",
+    percentage: "",
+    grade: "",
+    course: ""
+  };
 
 
   constructor(private studentService: StudentService, private route: ActivatedRoute,
@@ -53,4 +64,33 @@ export class DashboardComponent{
       }
     );
   }
+  deleteStudent(student:any){
+    this.studentService.deleteStudent(student.rollNumber).subscribe(
+      (resp)=>{
+        console.log(resp);
+        this.getStudentsDetails();
+        
+      },
+      (err)=>{
+        console.log(err);
+        
+      }
+    );
+  }
+  edit(student: { rollNumber: string; name: string; fathersName: string; phone: string; email: string; address: string; percentage: string; grade: string; course: string; }){
+this.studentToUpdate = student;
+  }
+  updateStudent(){
+    this.studentService.updateStudent(this.studentToUpdate).subscribe(
+      (resp) => {
+        console.log(resp);
+        
+      },
+      (err)=>{
+        console.log(err);
+        
+      }
+    )
+  }
+  
 }

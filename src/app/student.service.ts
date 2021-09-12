@@ -8,11 +8,18 @@ export class StudentService {
   constructor(private http: HttpClient) { }
 
   API = "http://localhost:9090";
-  public registerStudent(studentData: any){
-    return this.http.post(this.API+"/registerStudent",studentData);
+  public registerStudent(studentData: any) {
+    return this.http.post(this.API + "/registerStudent", studentData);
   }
 
-  public getStduents(){
-    return this.http.get(this.API+"/getStudents");
+  public getStduents() {
+    return this.http.get(this.API + "/getStudents");
   }
+  public deleteStudent(id: any) {
+    return this.http.delete(this.API + "/deleteStudent?id=" + id);
+  }
+  public updateStudent(student:any) {
+    return this.http.put(this.API + "/updateStudent", student);
+  }
+
 }

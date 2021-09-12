@@ -1,0 +1,28 @@
+.content-table{
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 15px;
+    min-width: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  .content{
+    background-color: #004298;
+    color: #ffffff;
+    text-align: left;
+    margin-left: 30px;
+  }
+  table, th, td {
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 20px;
+  }
+  td:hover{
+    background-color: skyblue;
+  }
