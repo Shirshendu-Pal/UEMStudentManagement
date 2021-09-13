@@ -1,4 +1,15 @@
 <div *ngIf="username=='sid' && password=='sid' ">
+  <nav class="navbar navbar-dark bg-primary justify-content-between">
+    <a class="navbar-brand">UEM StudentManagement System</a>
+    <form class="form-inline">
+      
+          <a class="btn btn btn-light btn-outline-info my-2 my-sm-0" href="dashboard">Log Out</a> 
+         
+      <!-- <a class="btn btn btn-light btn-outline-info my-2 my-sm-0" href="login">login</a>
+      <a class="btn btn btn-light btn-outline-info my-2 my-sm-0" href="dashboard">dashboard</a>
+       -->
+    </form>
+  </nav>
   <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
     <div class="container-fluid">
     <div class=" mb-3">
@@ -118,6 +129,17 @@
 </div>
 
 <div *ngIf="username!='sid' && password!='sid' ">
+  <nav class="navbar navbar-dark bg-primary justify-content-between">
+    <a class="navbar-brand">UEM StudentManagement System</a>
+    <form class="form-inline">
+      
+         <!-- <a class="btn btn btn-light btn-outline-info my-2 my-sm-0" href="dashboard">Log Out</a> -->
+         
+      <a class="btn btn btn-light btn-outline-info my-2 my-sm-0" href="login">login</a>
+      <a class="btn btn btn-light btn-outline-info my-2 my-sm-0" href="dashboard">dashboard</a>
+      
+    </form>
+  </nav>
   <table class="content-table">
   <thead class="content-table">
     
